@@ -1,4 +1,5 @@
 var gulp        = require('gulp'),
+    path        = require('path'),
     gutil       = require('gulp-util'),
     webpack     = require('webpack'),
     webserver   = require('gulp-webserver'),
@@ -21,7 +22,7 @@ gulp.task('dev.serve', function() {
   gulp.src('./')
     .pipe(webserver({
       port: DEV_PORT,
-      fallback: 'index.html'
+      fallback: 'index.html',
     }));
 });
 
