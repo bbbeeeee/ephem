@@ -5,13 +5,14 @@ var webpack = require('webpack'),
     es2015 = require('babel-preset-es2015');
 
 var PATHS = {
-  fonts: 'assets/fonts'
+  fonts: './assets/fonts',
+  app: './src/app'
 };
 
 module.exports = {
   debug: true,
   entry: {
-    main: './src/js/main.js',
+    main: './src/app/index.js',
   },
   output: {
     path: path.join(__dirname, ''),
@@ -20,7 +21,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loader: 'babel-loader?presets[]=es2015',
+      loaders: ['babel?presets[]=es2015&presets[]=react'],
       exclude: /(node_modules|bower_components)/
     }, {
       test: /\.css$/,
