@@ -13,8 +13,16 @@ html, body {
   position: relative;
 }
 
-h1, h2 {
+h1, h2, p {
   font-family: 'Josefin Sans', sans-serif !important;
+}
+
+p {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4em;
+  text-align: center;
 }
 
 h1 {
